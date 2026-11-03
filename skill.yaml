@@ -1,0 +1,20 @@
+name: ai_explainer_video
+title: AI Explainer Video
+description: 'Make Xiaohongshu/TikTok-style vertical AI explainer videos from a concept, article or post: one through-line metaphor, AI-generated animated scenes with a locked character and style, narration-matched events, TTS voiceover, burned subtitles, cover and follow-hook outro. Enforces the user''s quality red lines: no programmatic diagram slides (PPT-style), metaphor must be acted out on screen, camera always moving. New approved styles are added under references/ as style-NN files. Triggers: 做一个科普视频, 把这篇文章/帖子做成视频, 小红书科普视频, explainer video.'
+category: Video creation
+include_in_prompt: true
+skill_improvement:
+  managed: true
+  status: active
+  evidence_handles:
+  - message:user-2026-11-03-rejected-v1-ppt-style
+  - message:user-2026-11-03-approved-v2-and-requested-outro-and-skill
+  measurement:
+    proxy_metric_id: explainer_video_first_pass_acceptance
+    success_criterion: Across the window, explainer videos delivered under this skill pass the six-point delivery QA (resolution, duration, volume, frame-strip topic match, subtitle fit, cover check) and are not rejected by the user as PPT-style/diagram slides; every video carries one through-line metaphor acted out in generated scenes and the standard follow-hook outro.
+    window_days: 30
+  needs_review: false
+  rationale: 'Created 2026-11-03 at the user''s explicit request after the Super-agent explainer v1 (programmatic PIL diagram cards) was rejected as crude PPT slides and v2 (AI-generated animated scenes, one through-line metaphor of a never-closing AI company, locked robot characters) was approved. The user asked to沉淀 the production method including cover, style, transitions and effects as a skill other agents can follow, and to keep adding future approved styles into the same skill.'
+  review_after: 2026-12-03T19:00:00+08:00
+  reviewed_at: 2026-11-03T19:00:00+08:00
+  run_id: manual_2026-11-03_user_requested

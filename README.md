@@ -1,2 +1,29 @@
 # ai-explainer-video-skill
-AI explainer video skill: turn a concept/article/post into a vertical Xiaohongshu/TikTok-style science video — one through-line metaphor, AI-generated animated scenes, locked characters, TTS, burned subtitles, cover and follow-hook outro.
+
+把一个概念、一篇文章或一条帖子，做成小红书 / TikTok 风格竖屏 AI 科普短视频的 Agent Skill：
+**一个隐喻贯穿全片 + AI 生成动画镜头 + 同一角色贯穿 + 配音 + 烧录字幕 + 封面 + 尾部关注钩子。**
+
+## 它解决什么问题
+
+科普视频最常见的失败模式是「会动的 PPT」：程序画几个框图卡片、逐页切换、旁白念定义。这个 skill 把 2026-11-03 一次真实迭代（v1 被否决 → 研究 X 上优秀科普片 → v2/v3 验收通过）的标准、参数和踩坑全部沉淀下来，让任何 agent 照着做都能达到同一水准：
+
+- **质量红线**：禁止程序化框图当主体；隐喻必须被演出来而不是贴标签；讲到哪演到哪；镜头一直在动；钩子在前、答案在后。
+- **完整管线**：素材研判（畅想 ≠ 发布必须明说）→ 定隐喻写脚本 → AI 生成镜头（风格锁+角色锁+事件）→ 抽帧验收 → TTS 按段配音 → ffmpeg 合成（时长对齐、字幕计时、转场参数）→ 尾部关注钩子 → 封面（真实帧+黑罩+大字）→ 六点交付验收。
+- **可扩展风格库**：每种验收通过的新风格以 `references/style-NN-*.md` 独立存档并登记索引，只增不改。当前已有 Style 01「永不打烊的 AI 公司」（扁平矢量动画，机器人团队演完整个 Agent 概念），含全部提示词与脚本全文。
+
+## 文件
+
+| 文件 | 内容 |
+|---|---|
+| `SKILL.md` | 主流程、红线、合成参数、封面与尾钩规范、验收清单 |
+| `skill.yaml` | Skill 元信息 |
+| `references/styles-index.md` | 风格索引与新增风格流程 |
+| `references/style-01-never-closing-office.md` | Style 01 全档案：风格锁、角色锁、逐段提示词、脚本、实测参数、踩坑记录 |
+
+## 代表作
+
+《超级智能体》小红书科普视频（源自 DeepSeek Harness 2026-11-01 的 Super-agent 设计长文）：65 秒正片 + 4.6 秒关注尾钩，竖屏 720×1280。
+
+## 使用
+
+把本仓库放入你的 agent 的 skills 目录（或让 agent 直接读取 `SKILL.md`），然后说：「把这篇文章做成科普视频」即可触发。
