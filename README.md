@@ -19,10 +19,21 @@
 | `skill.yaml` | Skill 元信息 |
 | `references/styles-index.md` | 风格索引与新增风格流程 |
 | `references/style-01-never-closing-office.md` | Style 01 全档案：风格锁、角色锁、逐段提示词、脚本、实测参数、踩坑记录 |
+| `demo/` | Demo 成片（压缩预览版 MP4）与封面图 |
 
-## 代表作
+## Demo：《超级智能体》
 
-《超级智能体》小红书科普视频（源自 DeepSeek Harness 2026-11-01 的 Super-agent 设计长文）：65 秒正片 + 4.6 秒关注尾钩，竖屏 720×1280。
+用本 skill 制作的第一支完整成片，源自 DeepSeek Harness 2026-11-01 在 X 发布的 Super-agent 设计长文（架构畅想，非产品发布，片中已明说）。
+
+[![《超级智能体》Demo 封面](demo/super-agent-cover.jpg)](demo/super-agent-explainer-v3.mp4)
+
+▶ **[观看 Demo 视频（MP4）](demo/super-agent-explainer-v3.mp4)**
+
+- **隐喻**：超级智能体 = 一家永不打烊的 AI 公司；普通聊天 AI = 打卡下班的临时工。全片六段都发生在这家公司里，结尾以电表飞转（代价）和清晨交付一摞报告（回收隐喻）收束。
+- **风格**：Style 01「永不打烊的 AI 公司」——同一批小机器人员工贯穿全片，AI 生成动画镜头，讲到哪演到哪。
+- **规格**：原片竖屏 720×1280、69.8 秒（含 4.6 秒「关注我」尾钩）；仓库内为 540×960 压缩预览版，文件在 `demo/super-agent-explainer-v3.mp4`，封面在 `demo/super-agent-cover.jpg`。
+- **管线**：原文研判 → 定隐喻写脚本 → 6+1 段 AI 生成镜头 → 抽帧验收 → 按段 TTS 配音 → ffmpeg 合成（时长对齐、烧录字幕、淡入淡出）→ 真实帧封面 → 六点验收交付。
+- **迭代故事**：第一版用程序绘制的框图卡片制作，被用户以「太粗糙、像 PPT 放幻灯片」否决；按本 skill 的质量红线重做后验收通过。这条红线就来自这次教训。
 
 ## 使用
 
