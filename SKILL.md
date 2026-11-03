@@ -70,6 +70,9 @@
 | 序号 | 风格 | 一句话特征 | 细节文件 |
 |---|---|---|---|
 | 01 | 永不打烊的 AI 公司 | 扁平矢量动画，机器人团队在深夜办公室里演完整个概念 | `references/style-01-never-closing-office.md` |
+| 02 | 暖色编辑插画 · 类比动画 | 程序化插画动画（不依赖 AI 视频生成），暖纸色+陶土橙+线描小人，每个机制一个生活类比、逐句同步出场 | `references/style-02-warm-editorial.md` + `engines/style-02-warm-editorial/` |
+
+> 选 Style 02 时，第 3 步“生成镜头”和第 5 步“合成”改按其存档里的流程走（一键 `build.sh`），并先看存档开头的「与主流程的差异」表。
 
 ## 元信息速查
 - 字体：`/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc`（ffmpeg drawtext 与 PIL 通用）。注意：该字体渲染 emoji 会出豆腐块，画面文字一律不用 emoji。
