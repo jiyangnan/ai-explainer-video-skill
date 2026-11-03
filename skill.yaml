@@ -1,6 +1,6 @@
 name: ai_explainer_video
 title: AI Explainer Video
-description: 'Make Xiaohongshu/TikTok-style vertical AI explainer videos from a concept, article or post: one through-line metaphor, AI-generated animated scenes with a locked character and style, narration-matched events, TTS voiceover, burned subtitles, cover and follow-hook outro. Enforces the user''s quality red lines: no programmatic diagram slides (PPT-style), metaphor must be acted out on screen, camera always moving. New approved styles are added under references/ as style-NN files. Triggers: 做一个科普视频, 把这篇文章/帖子做成视频, 小红书科普视频, explainer video.'
+description: 'Make Xiaohongshu/TikTok-style vertical (9:16) AI explainer videos from a concept, article or post, signed 白羊武士: concepts acted out on screen with a consistent character, narration-matched action, TTS voiceover, burned subtitles, cover and publish copy. Style library: Style 01 uses AI-generated scenes with one through-line metaphor; Style 02 uses programmatic illustrated animation (frame-exact HTML/SVG render, one everyday analogy per mechanism, engine in engines/style-02-warm-editorial/). Enforces the user''s quality red lines: no programmatic diagram slides (PPT-style), concepts must be acted out, picture always moving. No follow-hook outro; length set by topic. New approved styles are added under references/ as style-NN files. Triggers: 做一个科普视频, 把这篇文章/帖子做成视频, 小红书科普视频, explainer video.'
 category: Video creation
 include_in_prompt: true
 skill_improvement:

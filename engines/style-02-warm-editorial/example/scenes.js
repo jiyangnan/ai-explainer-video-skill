@@ -352,5 +352,5 @@ const SCENES = [
     <div class="loop-bob" style="font-size:90px;margin-top:40px">👇</div></div>`,
 },
 ];
-const META = { series: 'AI 架构科普', source: 'DeepSeek Harness 团队《Exploring Super-agent Design》' };
+const META = { series: 'AI 架构科普', author: '白羊武士', source: 'DeepSeek Harness 团队《Exploring Super-agent Design》' };
 if (typeof module !== 'undefined') module.exports = { SCENES, META };

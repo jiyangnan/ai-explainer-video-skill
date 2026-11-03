@@ -129,7 +129,7 @@ const DUR = {fu:.7,fi:.6,pop:.6,sl:.7,sr:.7,drop:.8,stamp:.55,flip:.7,merge:.5,g
 window.setup = (si, starts, dur, total) => {
   const sc = SCENES[si];
   ST = {sc, starts, dur, si, total};
-  const M = (typeof META !== 'undefined') ? META : {}; document.getElementById('chap').textContent = (M.series || 'AI 科普') + ' · ' + sc.chap; document.getElementById('foot').textContent = M.source ? '资料来源：' + M.source : '';
+  const M = (typeof META !== 'undefined') ? META : {}; document.getElementById('chap').textContent = (M.series || 'AI 科普') + ' · ' + sc.chap; const ft = document.getElementById('foot'); ft.textContent = ''; const sg = document.createElement('b'); sg.style.color = 'var(--ink)'; sg.style.fontSize = '28px'; sg.textContent = M.author || '白羊武士'; ft.appendChild(sg); if (M.source) ft.appendChild(document.createTextNode('  ·  资料来源：' + M.source));
   document.getElementById('pg').textContent = String(si + 1).padStart(2, '0') + ' / ' + String(total).padStart(2, '0');
   const t = document.getElementById('t'); t.innerHTML = sc.title;
   t.dataset.at = 0; t.dataset.a = 'fu'; t.dataset.d = 0;
